@@ -45,8 +45,10 @@
 - **Body**:
 ```
 {
-    "nomeCliente": "nomeExemplo",
-    "cpfCliente": "000.000.000-00"
+    "nomeCliente": "Patrick",
+	"cpfCliente": "100.100.100-10",
+	"emailCliente": "patrick@email.com",
+	"senhaCliente": "123456789"	
 }
 ```
 
@@ -61,5 +63,39 @@
 ```
 {
     "erro": "Campos obrigatorios não preenchidos!"
+}
+```
+
+#### POST /clientes/login
+- **Descrição**: Fazer um login de usuario
+
+- **Body**:
+```
+{
+    "emailCliente": "patrick@email.com",
+	"senhaCliente": "123456789"	
+}
+```
+
+- **Response**:
+```
+{
+    "message": "Logado com sucesso!"
+}
+```
+
+#### Erros de login
+
+- **Error Response**:
+```
+{
+    "erro": "Email não encontrado!"
+}
+```
+
+- **Error Response**:
+```
+{
+    "erro": "Credenciais inválidas"
 }
 ```
